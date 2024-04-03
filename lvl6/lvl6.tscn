@@ -1,0 +1,304 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://tiles/Background layers/trees.mid.png" type="Texture" id=1]
+[ext_resource path="res://tiles/Background layers/Lights.png" type="Texture" id=2]
+[ext_resource path="res://tiles/Background layers/front.grass.png" type="Texture" id=3]
+[ext_resource path="res://tiles/Background layers/smooth.out.fog.png" type="Texture" id=4]
+[ext_resource path="res://tiles/Background layers/back.grass.png" type="Texture" id=5]
+[ext_resource path="res://tiles/Background layers/trees.back.png" type="Texture" id=6]
+[ext_resource path="res://tiles/Background layers/top.of.trees.png" type="Texture" id=7]
+[ext_resource path="res://tiles/Background layers/trees.mid.fade.png" type="Texture" id=8]
+[ext_resource path="res://tiles/Background layers/trees.way.back.png" type="Texture" id=9]
+[ext_resource path="res://tiles/Background layers/Lights.back.png" type="Texture" id=10]
+[ext_resource path="res://tiles/Background layers/trees.fog.png" type="Texture" id=11]
+[ext_resource path="res://MovingP/Pic.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Correct/CPic.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Last/LPic.tscn" type="PackedScene" id=14]
+[ext_resource path="res://lvl6/lvl6.gd" type="Script" id=15]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 133.25, 101 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 95.5, 68.25 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 960, 507.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 138.5, 126.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 148.5, 119 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 122.5, 97.5 )
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource( 15 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -7, 0 )
+format = 1
+
+[node name="smoothOutFog" type="Sprite" parent="TileMap"]
+position = Vector2( 1084.63, 502.094 )
+scale = Vector2( 2.3521, 1.26584 )
+texture = ExtResource( 4 )
+
+[node name="Treesfog" type="Sprite" parent="TileMap"]
+position = Vector2( 482, 257 )
+texture = ExtResource( 11 )
+
+[node name="Treesfog2" type="Sprite" parent="TileMap"]
+position = Vector2( 1404, 262 )
+texture = ExtResource( 11 )
+
+[node name="Treesfog3" type="Sprite" parent="TileMap"]
+position = Vector2( 2291, 262 )
+scale = Vector2( 0.946121, 1 )
+texture = ExtResource( 11 )
+
+[node name="Backgrass" type="Sprite" parent="TileMap"]
+position = Vector2( 472, 216 )
+texture = ExtResource( 5 )
+
+[node name="Backgrass2" type="Sprite" parent="TileMap"]
+position = Vector2( 1384, 216 )
+texture = ExtResource( 5 )
+
+[node name="Backgrass3" type="Sprite" parent="TileMap"]
+position = Vector2( 2281, 216 )
+texture = ExtResource( 5 )
+
+[node name="Treesback" type="Sprite" parent="TileMap"]
+position = Vector2( 471, 221 )
+texture = ExtResource( 6 )
+
+[node name="Treesback2" type="Sprite" parent="TileMap"]
+position = Vector2( 1308, 221 )
+texture = ExtResource( 6 )
+
+[node name="Treesback3" type="Sprite" parent="TileMap"]
+position = Vector2( 2170, 221 )
+texture = ExtResource( 6 )
+
+[node name="Treesmidfade" type="Sprite" parent="TileMap"]
+position = Vector2( 517, 231 )
+texture = ExtResource( 8 )
+
+[node name="Treesmidfade2" type="Sprite" parent="TileMap"]
+position = Vector2( 1409, 247 )
+texture = ExtResource( 8 )
+
+[node name="Treesmidfade3" type="Sprite" parent="TileMap"]
+position = Vector2( 2316, 231 )
+texture = ExtResource( 8 )
+
+[node name="Treesmidfade4" type="Sprite" parent="TileMap"]
+position = Vector2( 2742, 797 )
+scale = Vector2( 1, 0.564628 )
+texture = ExtResource( 8 )
+
+[node name="Treesmid" type="Sprite" parent="TileMap"]
+position = Vector2( 542, 242 )
+texture = ExtResource( 1 )
+
+[node name="Treesmid2" type="Sprite" parent="TileMap"]
+position = Vector2( 1424, 247 )
+texture = ExtResource( 1 )
+
+[node name="Treesmid3" type="Sprite" parent="TileMap"]
+position = Vector2( 2301, 247 )
+texture = ExtResource( 1 )
+
+[node name="Topoftrees" type="Sprite" parent="TileMap"]
+position = Vector2( 448, 239 )
+texture = ExtResource( 7 )
+
+[node name="Topoftrees2" type="Sprite" parent="TileMap"]
+position = Vector2( 1368, 247 )
+texture = ExtResource( 7 )
+
+[node name="Topoftrees" type="Sprite" parent="TileMap/Topoftrees2"]
+position = Vector2( 910, 4 )
+texture = ExtResource( 7 )
+
+[node name="Frontgrass" type="Sprite" parent="TileMap"]
+position = Vector2( 466, 259 )
+texture = ExtResource( 3 )
+
+[node name="Frontgrass2" type="Sprite" parent="TileMap"]
+position = Vector2( 1391, 259 )
+texture = ExtResource( 3 )
+
+[node name="Frontgrass3" type="Sprite" parent="TileMap"]
+position = Vector2( 2304, 259 )
+texture = ExtResource( 3 )
+
+[node name="Treeswayback" type="Sprite" parent="TileMap"]
+position = Vector2( 993, 1631 )
+scale = Vector2( 0.511853, 0.405422 )
+texture = ExtResource( 9 )
+
+[node name="Treeswayback2" type="Sprite" parent="TileMap"]
+position = Vector2( 2094, 798 )
+scale = Vector2( 1.61584, 0.405422 )
+texture = ExtResource( 9 )
+
+[node name="Treeswayback3" type="Sprite" parent="TileMap"]
+position = Vector2( 699, 798 )
+scale = Vector2( 1.48653, 0.405422 )
+texture = ExtResource( 9 )
+
+[node name="Treesmidfade5" type="Sprite" parent="TileMap"]
+position = Vector2( 604, 803 )
+scale = Vector2( 1.27263, 0.474779 )
+texture = ExtResource( 8 )
+
+[node name="Treesmidfade6" type="Sprite" parent="TileMap"]
+position = Vector2( 1769, 802 )
+scale = Vector2( 1.27263, 0.474779 )
+texture = ExtResource( 8 )
+
+[node name="Topoftrees3" type="Sprite" parent="TileMap"]
+position = Vector2( 467, 784 )
+scale = Vector2( 1, 0.757566 )
+texture = ExtResource( 7 )
+
+[node name="Topoftrees4" type="Sprite" parent="TileMap"]
+position = Vector2( 1382, 802 )
+scale = Vector2( 1, 0.82913 )
+texture = ExtResource( 7 )
+
+[node name="Topoftrees5" type="Sprite" parent="TileMap"]
+position = Vector2( 2294, 788 )
+scale = Vector2( 1, 0.730769 )
+texture = ExtResource( 7 )
+
+[node name="Backgrass4" type="Sprite" parent="TileMap"]
+position = Vector2( 463, 613 )
+texture = ExtResource( 5 )
+
+[node name="Backgrass5" type="Sprite" parent="TileMap"]
+position = Vector2( 1378, 613 )
+texture = ExtResource( 5 )
+
+[node name="Backgrass6" type="Sprite" parent="TileMap"]
+position = Vector2( 2280, 613 )
+texture = ExtResource( 5 )
+
+[node name="Lightsback" type="Sprite" parent="TileMap"]
+position = Vector2( 202, -28 )
+texture = ExtResource( 10 )
+
+[node name="Lightsback2" type="Sprite" parent="TileMap"]
+position = Vector2( 1941, -21 )
+texture = ExtResource( 10 )
+
+[node name="Lightsback3" type="Sprite" parent="TileMap"]
+position = Vector2( 1065, -32 )
+texture = ExtResource( 10 )
+
+[node name="Lights" type="Sprite" parent="TileMap"]
+position = Vector2( 559, 335 )
+texture = ExtResource( 2 )
+
+[node name="Lights2" type="Sprite" parent="TileMap"]
+position = Vector2( 1578, 325 )
+texture = ExtResource( 2 )
+
+[node name="Lights3" type="Sprite" parent="TileMap"]
+position = Vector2( 2415, 403 )
+texture = ExtResource( 2 )
+
+[node name="Correct" parent="." instance=ExtResource( 13 )]
+position = Vector2( -10455, 471 )
+
+[node name="Area2D" type="Area2D" parent="Correct"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Correct/Area2D"]
+position = Vector2( -1, 0 )
+shape = SubResource( 3 )
+
+[node name="Node2D" parent="." instance=ExtResource( 12 )]
+position = Vector2( -106, 108 )
+
+[node name="last" parent="." instance=ExtResource( 14 )]
+position = Vector2( -11320, 284 )
+
+[node name="Area2D" type="Area2D" parent="last"]
+position = Vector2( -1, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="last/Area2D"]
+position = Vector2( 22, 5 )
+shape = SubResource( 1 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 12 )]
+position = Vector2( -431, 403 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 12 )]
+position = Vector2( -1681, 445 )
+
+[node name="Node2D5" parent="." instance=ExtResource( 12 )]
+position = Vector2( -9446, 134 )
+
+[node name="Node2D6" parent="." instance=ExtResource( 12 )]
+position = Vector2( -8616, 349 )
+
+[node name="Node2D7" parent="." instance=ExtResource( 12 )]
+position = Vector2( -7337, 543 )
+
+[node name="Node2D8" parent="." instance=ExtResource( 12 )]
+position = Vector2( -6662, 160 )
+
+[node name="Node2D9" parent="." instance=ExtResource( 12 )]
+position = Vector2( -5328, 131 )
+
+[node name="Node2D11" parent="." instance=ExtResource( 12 )]
+position = Vector2( -4513, 591 )
+
+[node name="Node2D12" parent="." instance=ExtResource( 12 )]
+position = Vector2( -3865, 168 )
+
+[node name="Node2D13" parent="." instance=ExtResource( 12 )]
+position = Vector2( -3330, 541 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 950, 497.5 )
+shape = SubResource( 2 )
+
+[node name="corr" parent="." instance=ExtResource( 13 )]
+position = Vector2( -2772, 197 )
+
+[node name="Area2D" type="Area2D" parent="corr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="corr/Area2D"]
+position = Vector2( 1, 3 )
+shape = SubResource( 4 )
+
+[node name="corre" parent="." instance=ExtResource( 13 )]
+position = Vector2( -5700, 595 )
+
+[node name="Area2D" type="Area2D" parent="corre"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="corre/Area2D"]
+position = Vector2( 1, 4 )
+shape = SubResource( 5 )
+
+[node name="correct" parent="." instance=ExtResource( 13 )]
+position = Vector2( -1275, 111 )
+
+[node name="Area2D" type="Area2D" parent="correct"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="correct/Area2D"]
+position = Vector2( 2, 1 )
+shape = SubResource( 6 )
+
+[connection signal="area_entered" from="Correct/Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_shape_exited" from="last/Area2D" to="." method="_on_Area2D_area_shape_exited"]
+[connection signal="area_entered" from="corr/Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="corre/Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="correct/Area2D" to="." method="_on_Area2D_area_entered"]

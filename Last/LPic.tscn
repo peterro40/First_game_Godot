@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Last/LTextBut.gd" type="Script" id=1]
+[ext_resource path="res://Last/LPic.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="LastP" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="LastP" to="." method="_on_LastP_pressed"]
